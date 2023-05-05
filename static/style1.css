@@ -1,0 +1,323 @@
+/* Dashboard */
+body{
+    background-image: url(images/img1.jpg);
+    overflow: hidden;
+    font-family:  'Times New Roman', Times, serif;
+}
+
+/* Header for every page after login */
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    font-weight: bolder;
+}
+
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.upbox{
+    width: 400px;
+    height: 500px;
+    box-shadow: 0px 0px 45px 20px ;
+    background-color: #eacd6e;
+}
+
+.upbox1{
+    width: 450px;
+    height: 650px;
+    box-shadow: 0px 0px 45px 20px ;
+    /* background-color: #eacd6e; */
+    background-color:#a5d916;
+}
+
+.sub{
+    text-align: center;
+    padding: 10px;
+}
+
+input{
+    box-sizing: border-box;
+    border-color:black;
+    font-size: 20px;
+}
+
+.head{
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0 5px;
+}
+
+.info{
+    font-weight: bold;
+    text-align: center;
+    font-size:120%;
+}
+
+#btn{
+    background-color: #105ded;
+    color: white;
+    border: 2px solid black;
+}
+
+#btn:hover{
+    background-color: #100ded;
+}
+
+#btnc{
+    border: 2px solid black;
+}
+
+#btnc:hover{
+    background-color: red;
+    color: white;
+    border: 2px solid black;
+}
+
+h2{    
+    display: inline-flex;
+    margin: 4px;
+    padding-top: 5px;
+    font-weight: bolder;
+    padding-left: 10px;
+}
+
+ul{
+    display: inline-flex;
+    align-items:center;
+    justify-content: center;
+    float: right;
+    margin: 12px;
+    padding-right: 15px;
+}
+
+ .box1{
+    border: 1px solid black;
+    margin: 20px;
+    background-color: white;
+    /* background-color: #108ded; */
+    background-color:green;
+    background-image: url(images/img1.jpg);
+    background-blend-mode:color-burn;
+    width: 334px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    float:left;
+}  
+a{
+    text-decoration:none;
+}
+.car1{
+    margin: 10px 22px 22px 35px;
+    width: 250px;
+    height: 200px;
+    border:5px solid black;
+    border-radius: 10px;
+    background-image: url(images/img1.jpg);
+    box-shadow: 0px 0px 5px 5px;
+} 
+
+.cont{
+    padding-left: 20px;
+    /* display: flex; */
+    /* float: left;  */
+    flex-wrap: wrap;
+    max-height: 92vh;
+    min-height: 50vh;
+    overflow-y: auto;
+    scroll-margin-right: 0px;
+}
+
+#in{
+    display: inline;
+}
+
+textarea{
+    border:2px solid black 
+}
+
+.newb{
+    border: 2px solid black;
+    height: 35px;
+    width: 130px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+#check{
+    size: 20px;
+    border: 1px solid black;
+    color: #105ded;
+}
+
+#btn1{
+    background-color: #105ded;
+    color: white;
+    border: 2px solid white;
+    height: 35px;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: bold;
+    margin: 0px;
+}
+#btn1:hover{
+    background-color: #102ded;
+    color: white;
+}
+.contop{
+    border-radius: 8px;
+    border:15px solid #424242;
+}
+
+.buton{
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    height: 35px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    padding: 0 10px;
+    margin: 0px 0px 5px 0%;
+
+}
+
+#buton{
+    height: 30px;
+}
+textarea{
+    resize: none;
+}
+
+.nest{
+    max-height: 460px;
+    min-height: 465px;
+    overflow-y: auto;
+}
+
+.present{
+    background-color: white;
+    font-size: large;
+    text-align: center;
+    margin: 2px 8px 5px 8px;
+    border: 2px solid black;
+    border-radius: 15px;
+    max-height: 65px;
+    overflow: auto;
+}
+
+.navb{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#navb{
+    background-color: #cc0404;
+    color: white;
+}
+
+#confirmbox{
+    width: 500px;
+    height: 300px;
+    box-shadow: 0px 0px 45px 20px ;
+    background-color: orange;
+    text-align: center;
+}
+
+.formp{
+    margin: 3px;
+}
+
+.check{
+    width: 20px;
+    height: 20px;
+}
+
+#pen{
+    background-color:rgb(255, 77, 0);
+    color: white;
+}
+
+#comp{
+    background-color: green;
+    color: white;
+}
+
+#fail{
+    background-color: red;
+    color: white;
+}
+
+#btn3{
+    font-size: large;
+}
+
+#btn3:hover{
+    font-size: large;
+    background-color: #105ded;
+    color: white;
+}
+
+.boxp{
+    font-weight: bold;
+    font-size: large;
+    background-color: whitesmoke;
+    height: 50px;
+    width: 100%;
+}
+
+.carp{
+    font-weight: bold;
+    font-size: large;
+    background-color: whitesmoke;
+    height: 60px;
+    width: 94%;
+}
+
+#carp{
+    /* border-radius: 15px; */
+    margin: 0 3% 0 3%;
+}
+
+/* Notification box */
+.not1{
+    font-size: large;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    /* width: 1000px; */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.low{
+    padding-left: 100px;
+    margin-top: 5px;
+}
+#newb{
+    border: 2px black;
+    border-radius: 15px;
+    text-align: center;
+    font-size: large;
+    color: white;
+    height: 30px;
+    width: 130px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #105ded;
+}
+
+#newb:hover{
+    background-color: #100ded;
+}

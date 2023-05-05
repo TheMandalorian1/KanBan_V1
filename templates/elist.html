@@ -1,0 +1,28 @@
+{% extends "base1.html" %}
+{% block title %}The KanBan | Edit List{% endblock %}
+{% block content %}
+
+    <div class="top">
+        <div class="upbox">    
+            <h1 class="head">Edit list</h1>
+            
+            <form action="/editlist/{{list}}" method="post">
+                <div class="info">
+                    <label for="name"><p>Name:</p></label>
+                    <p><input type="text" name="name" placeholder="Name" maxlength="20" required value="{{list}}"></p>
+                </div>
+                <div class="info">
+                    <label for="desc"><p>Description:</p></label>
+                    <p><textarea name="desc" cols="22" rows="3" placeholder="Description...." required>{{cont}}</textarea></p>
+                </div>
+                <div class="sub">
+                    <button type="submit" class="newb" id="btn">Save</button>    
+                </div>
+            </form>
+            <div class="sub">
+                <a href="/dashboard"><button class="newb" id="btnc">Cancel</button></a>
+            </div>          
+        </div>  
+    </div>
+
+{% endblock %}

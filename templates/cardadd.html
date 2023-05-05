@@ -1,0 +1,48 @@
+{% extends "base1.html" %}
+{% block title %}The KanBan | Add Task{% endblock %}
+{% block content %}
+
+<div class="top">
+    <div class="upbox1">
+        <h1 class="head">Add Task</h1>
+
+        <form action="/{{own}}/createcard" method="post">
+            <div class="info">
+                <p><label for="name">In list: </label>
+                <select name="list" id="in">
+                    <option value="{{own}}">{{own}}</option>
+                    {% for l in lists %}
+                    <option value="{{l}}">{{l}}</option>
+                    {% endfor %}
+                </select></p>
+            </div>
+            <div class="info">
+                <label for="name"><p class="formp">Title: </p></label>
+                <p><input type="text" name="name" placeholder="Title" maxlength="20" required></p>
+            </div>
+            <div class="info">
+                <label for="desc"><p class="formp">Content: </p></label>
+                <p><textarea name="desc" cols="22" rows="3" placeholder="Content" maxlength="200" required></textarea></p>
+            </div>
+            <div class="info">
+                <p><label for="deadline">Deadline: </label>
+                <input type="date" name="deadline" min="{{td}}" required></p>
+            </div>
+
+            <div class="info">
+                <p><label for="status">Mark as completed: </label>
+                <input type="checkbox" name="status" value="Completed" class="check"></p>
+            </div>
+
+            <div class="sub">
+                <button type="submit" class="newb" id="btn">Save</button>
+            </div>
+        </form>
+        <div class="sub">
+            <button onclick="history.back()" class="newb" id="btnc">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

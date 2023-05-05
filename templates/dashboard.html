@@ -1,0 +1,65 @@
+{% extends "base1.html" %}
+{% block title %}The KanBan | Dashboard{% endblock %}
+{% block content %}
+
+<!-- Main Container -->
+<div class="cont">
+
+    {% if lister|length > 0 %}
+    {% for d in lister %}
+    <!-- Container of a List -->
+        <div class=" box1">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle buton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <h3 id="in">{{d[0]}}</h3>
+                </button>
+
+                <ul class="dropdown-menu">
+                  <li><a href="/editlist/{{d[0]}}"><button class="dropdown-item" type="button">Edit</button></a></li>
+                  <li><a href="/dlist/{{d[0]}}/confirm"><button class="dropdown-item" type="button">Delete</button></a></li>
+                </ul>
+
+            </div>
+            <textarea cols="30" rows="2"  class="boxp">{{d[1]}}</textarea>
+            <!-- Container in the list for all Cards -->
+            <div class="nest">
+            {% for c in d[2] %}
+            <!-- Container of a Card -->
+                <div class="car1">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle buton" id="buton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <h4 id="in">{{c[1]}}</h4>
+                        </button>
+        
+                        <ul class="dropdown-menu">
+                          <li><a href="/editcard/{{d[3]}}/{{c[1]}}"><button class="dropdown-item" type="button">Edit</button></a></li>
+                          <li><a href="/dcard/{{d[3]}}/{{c[1]}}/confirm"><button class="dropdown-item" type="button">Delete</button></a></li>
+                        </ul>
+                    </div>
+
+                    <textarea class="carp" id="carp" cols="30" rows="2" >{{c[2]}}</textarea>
+                    <p class="present">{{c[3]}}</p>
+
+                    {% if c[4] == 'Pending' %}
+                        <p class="present" id="pen">{{c[4]}}</p>
+                    {% elif c[4] == 'Completed' %}
+                        <p class="present" id="comp">{{c[4]}}</p>
+                    {% else %}
+                        <p class="present" id="fail">{{c[4]}}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}  
+        </div>
+        <div class="low">
+            <a href="/{{d[0]}}/createcard"><button class="" id="newb">Add Card +</button></a>
+        </div> 
+    </div>
+    {% endfor %}
+    {% else %}
+        <div>
+            <h3>There are no lists on the board.</h3>
+            <a href="/createlist"><button>Add List +</button></a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

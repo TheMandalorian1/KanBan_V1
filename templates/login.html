@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}The KanBan | Login{% endblock %}
+{% block content %}
+
+<div class="top">
+    <div class="upbox">
+
+        <h1 class="head">Login</h1>
+        
+        <form action="/login" method="post">
+            <div class="info">
+                <label for="email">Enter your email: </label>
+                <input type="email" name="email" placeholder="Email" maxlength="100" required>
+            </div>
+            <div class="info">
+                <label for="password">Enter your password: </label>
+                <input type="password" name="pass1" placeholder="Password" maxlength="15" required>
+            </div>
+            <div class="sub">
+                <button type="submit" class="buton" id="btn">Login</button>    
+            </div>
+        </form>
+
+        <div class="sub">
+            <a href="/register"><button type="submit" class="buton">Register</button></a>
+        </div>
+    </div>  
+</div>
+
+{% endblock %}

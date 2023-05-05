@@ -1,0 +1,178 @@
+openapi: 3.0.0
+info:
+  title: KanBan API
+  description: >
+    <div>In this assignment, you have to create a RESTful API, database models using Flask-RESTful  and     flask-SQLAlchemy. We list below instructions to be followed in 
+    preparing and submitting the solution.
+    <h3>General instructions:</h3>
+
+    </div>
+
+    <h3> Customer Table Schema </h3> 
+    <table>
+      <thead>
+        <th>Column Name</th>
+        <th>Column Type</th>
+        <th>Constraints</th>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Customer_id</td>
+        <td>Integer</td>
+        <td>Primary Key, Auto Increment</td>
+      </tr>
+      <tr>
+        <td>Customer_name</td>
+        <td>String</td>
+        <td>Not Null</td>
+      </tr>
+      <tr>
+        <td>Customer_email</td>
+        <td>String</td>
+        <td>Unique, Not Null</td>
+      </tr>      
+      <tr>
+        <td>Customer_pass</td>
+        <td>String</td>
+        <td>Not Null</td>
+      </tr>         
+    </tbody>
+    </table>
+
+    <h3> List Table Schema </h3> 
+    <table>
+      <thead>
+        <th>Column Name</th>
+        <th>Column Type</th>
+        <th>Constraints</th>
+      </thead>
+      <tbody>
+      <tr>
+        <td>List_id</td>
+        <td>Integer</td>
+        <td>Primary Key, Auto Increment</td>
+      </tr>
+      <tr>
+        <td>List_name</td>
+        <td>String</td>
+        <td>Not Null</td>
+      </tr>
+      <tr>
+        <td>List_desc</td>
+        <td>String</td>
+        <td>Not Null</td>
+      </tr>      
+      <tr>
+        <td>Customerl_id</td>
+        <td>Integer</td>
+        <td>ForeignKey(customer.Customer_id), Not Null</td>
+      </tr>         
+    </tbody>
+    </table>
+
+
+    <h3> Card Table Schema </h3> 
+    <table>
+      <thead>
+        <th>Column Name</th>
+        <th>Column Type</th>
+        <th>Constraints</th>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Card_id</td>
+        <td>Integer</td>
+        <td>Primary Key, Auto Increment</td>
+      </tr>
+      <tr>
+        <td>Card_list</td>
+        <td>String</td>
+        <td>Not Null</td>
+      </tr>
+      <tr>
+        <td>Card_title</td>
+        <td>String</td>
+        <td>Not Null</td>
+      </tr>
+      <tr>
+        <td>Card_content</td>
+        <td>String</td>
+        <td>Not Null</td>
+      </tr>
+      <tr>
+        <td>Card_status</td>
+        <td>String</td>
+        <td>Not Null</td>
+      </tr>
+      <tr>
+        <td>Card_dline</td>
+        <td>String</td>
+        <td>Not Null</td>
+      </tr>
+      <tr>
+        <td>Listc_id</td>
+        <td>Integer</td>
+        <td>ForeignKey(list.List_id), Not Null</td>
+      </tr>
+    </tbody>
+    </table>
+    
+    
+     <h3> Error Codes </h3> 
+    <table>
+      <thead>
+        <th>Resource</th>
+        <th>Error Code</th>
+        <th>Message</th>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Customer</td>
+        <td>CUSTE001</td>
+        <td>Customer Name is required and should be string.</td>
+      </tr>
+      <tr>
+       <td>Customer</td>
+        <td>CUSTE002</td>
+        <td>Customer Email is required and should be string.</td>
+      </tr>
+      <tr>
+       <td>Customer</td>
+        <td>CUSTE003</td>
+        <td> Customer Password required and should be string.</td>
+      </tr>
+      <tr>
+        <td>Student</td>
+        <td>STUDENT001</td>
+        <td>Roll Number required and should be String </td>
+      </tr>
+      <tr>
+        <td>Student</td>
+        <td>STUDENT002</td>
+        <td>First Name is required and should be String </td>
+      </tr>
+      <tr>
+        <td>Student</td>
+        <td>STUDENT003</td>
+        <td>Last Name is String </td>
+      </tr>
+      <tr>
+        <td>Enrollment</td>
+        <td>ENROLLMENT001</td>
+        <td>Course does not exist</td>
+      </tr>
+      <tr>
+        <td>Enrollment</td>
+        <td>ENROLLMENT002</td>
+        <td>Student does not exist.</td>
+      </tr>  
+      <tr>
+        <td>Enrollment</td>
+        <td>ENROLLMENT003</td>
+        <td>Course Code is required and should be string.</td>
+      </tr> 
+    </tbody>
+    </table>
+  version: 1.0.0
+servers:
+  - url: http://127.0.0.1:5000/

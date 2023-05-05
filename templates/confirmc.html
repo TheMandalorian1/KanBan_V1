@@ -1,0 +1,17 @@
+{% extends "base1.html" %}
+{% block title %}The KanBan | Dashboard{% endblock %}
+{% block content %}
+  <div class="top">
+    <div id="confirmbox">
+      <h2>Do you really want to delete this task?</h2>
+      <form action="/dcard/{{lis_id}}/{{card}}/delete" method="post">
+        <div class="sub">
+        <a href="/dcard/{{lis_id}}/{{card}}/delete"><button id="btn" class="newb">Yes</button></a>
+        </div>
+      </form>
+      <div class="sub">
+        <button onclick="history.back()" class="newb" id="btnc">Cancel</button>
+      </div>
+    </div>
+  </div>
+{% endblock %}

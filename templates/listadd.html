@@ -1,0 +1,28 @@
+{% extends "base1.html" %}
+{% block title %}The KanBan | Add List{% endblock %}
+{% block content %}
+
+    <div class="top">
+        <div class="upbox">    
+            <h1 class="head">Add List</h1>
+            
+            <form action="/createlist" method="post">
+                <div class="info">
+                    <label for="name"><p>Name:</p></label>
+                    <p><input type="text" name="name" placeholder="Name" maxlength="20" required></p>
+                </div>
+                <div class="info">
+                    <label for="desc"><p>Description:</p></label>
+                    <p><textarea name="desc" cols="22" rows="2" placeholder="Description...." required maxlength="100">{{cont}}</textarea></p>
+                </div>
+                <div class="sub">
+                    <button type="submit" class="newb" id="btn">Save</button>    
+                </div>
+            </form>
+            <div class="sub">
+                <button onclick="history.back()" class="newb" id="btnc">Cancel</button>
+            </div>    
+        </div>  
+    </div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base1.html" %}
+{% block title %}The KanBan | Edit Task{% endblock %}
+{% block content %}
+
+<div class="top">
+    <div class="upbox1">    
+        <h1 class="head">Edit Task</h1>
+        
+        <form action="/editcard/{{elis_id}}/{{ecard}}" method="post">
+            <div class="info">
+            <label for="list"><p>Move to list:</p></label>
+            <select name="list" id="in" >
+                <option value="{{own}}">{{own}}</option>
+                {% for l in elists %}
+                    <option value="{{l}}">{{l}}</option>
+                {% endfor %}
+            </select>
+            </div>
+            <div class="info">
+                <label for="name"><p  class="formp">Title:</p></label>
+                <p><input type="text" name="name" placeholder="Title" maxlength="20" required value="{{ecard}}"></p>
+            </div>
+            <div class="info">
+                <label for="desc"><p  class="formp">Content: </p></label>
+                <p><textarea name="desc" cols="22" rows="3" placeholder="Content" maxlength="200" required>{{econt}}</textarea></p>
+            </div>
+            <div class="info">
+                <p><label for="deadline">Deadline: </label>
+                <input type="date" name="deadline" value="{{edl}}" min="{{edl}}"></p>
+            </div>
+
+            <div class="info">
+                <label for="status" class="formp">Mark as completed: </label>
+                {% if estatus == "Completed" %}
+                    <input type="checkbox" class="check" name="status" value="Completed" checked disabled >
+                {% elif estatus == "Failed to complete" %}
+                    <input type="checkbox" class="check" name="status" value="Completed" disabled>
+                {% else %}
+                    <input type="checkbox" class="check" name="status" value="Completed">
+                {% endif %}
+                
+            </div>
+
+            <div class="sub">
+                <button type="submit" class="newb" id="btn">Save</button>    
+            </div>
+        </form>
+        <div class="sub">
+            <a href="/dashboard"><button class="newb" id="btnc">Cancel</button></a>
+        </div>
+    </div>  
+</div>
+
+
+{% endblock %}

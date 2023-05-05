@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
+        crossorigin="anonymous">
+    
+    <!-- Title -->
+    <title>The KanBan | Login</title>
+    <style>
+        .head{
+            text-align: center;
+            padding: 30px 20px;
+        }
+        body{
+            font-family: Open Sans;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(120deg,#2980b9,#8e44ad);
+        }
+        .cont{
+            width: 400px;
+            height: 550px;
+            box-shadow: 5px 5px 40px 20px;
+           
+        }
+        .cred{
+            text-align: center;
+            padding: 20px;
+            font-size:150%;
+        }
+        .sub{
+            text-align: center;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="head">
+            <h1>Login</h1>
+        </div>
+        <form action="/" method="post">
+            <div class="cred">
+                <label for="email">Enter your email: </label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="cred">
+                <label for="password">Enter your password: </label>
+                <input type="password" name="pass" required >
+            </div>
+            <div class="sub">
+                <input type="submit" value="Login">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
